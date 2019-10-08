@@ -704,10 +704,13 @@ def configuration_model()
         <Item label="Devices in association group 3" value="2" />
         <Item label="Dimmer itself and devices in association group 3" value="3" />
     </Value>
-    <Value type="boolean" byteSize="1" index="81" label="S1 Switch Notification" min="0" max="1" value="true" setting_type="zwave" fw="">
+    <Value type="list" byteSize="1" index="81" label="S1 Switch Notification" min="0" max="2" value="1" setting_type="zwave" fw="">
         <Help>
-            External S1 switch sends Basic Set CC to association group 3
+            External S1 switch sends to devices in association group 3...
         </Help>
+        <Item label="Nothing" value="0" />
+        <Item label="Basic Set CC" value="1" />
+        <Item label="Switch Multilevel Set" value="2" />
     </Value>
     <Value type="list" byteSize="1" index="121" label="S2 Switch Type" min="0" max="4" value="0" setting_type="zwave" fw="">
         <Help>
@@ -728,10 +731,13 @@ def configuration_model()
         <Item label="Devices in association group 4" value="2" />
         <Item label="Dimmer itself and devices in association group 4" value="3" />
     </Value>
-    <Value type="boolean" byteSize="1" index="82" label="S2 Switch Notification" min="0" max="1" value="true" setting_type="zwave" fw="">
+    <Value type="list" byteSize="1" index="82" label="S2 Switch Notification" min="0" max="2" value="1" setting_type="zwave" fw="">
         <Help>
-            External S2 switch sends Basic Set CC to association group 4
+            External S2 switch sends to devices in association group 4...
         </Help>
+        <Item label="Nothing" value="0" />
+        <Item label="Basic Set CC" value="1" />
+        <Item label="Switch Multilevel Set" value="2" />
     </Value>
 
     <Value type="byte" byteSize="1" index="125" label="Dimming speed" min="1" max="255" value="3" setting_type="zwave" fw="">
